@@ -1,0 +1,54 @@
+## Docker commands used to build the application 
+docker build -t techtrends .
+
+## Docker commands used to run the application
+docker run -d -p 7111:3111 techtrends
+
+## Docker commands used to get the application logs
+docker logs 0f59396bb18c
+
+## Logs from the container running the TechTrends application
+2022-10-18 21:21:34 INFO     172.17.0.1 - - [18/Oct/2022 21:21:34] "GET /healthz HTTP/1.1" 200 -
+(.myenv) Gbonjubolas-MBP:techtrends gbonjubolaadelokun$ docker logs ef7839035751
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2022-10-18 21:19:55 WARNING   * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-10-18 21:19:55 INFO      * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+2022-10-18 21:20:07 INFO     172.17.0.1 - - [18/Oct/2022 21:20:07] "GET / HTTP/1.1" 200 -
+2022-10-18 21:20:07 INFO     172.17.0.1 - - [18/Oct/2022 21:20:07] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-10-18 21:20:33 INFO     172.17.0.1 - - [18/Oct/2022 21:20:33] "GET / HTTP/1.1" 200 -
+2022-10-18 21:20:33 INFO     172.17.0.1 - - [18/Oct/2022 21:20:33] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-10-18 21:20:37 INFO     The "About Us" page is retrieved
+2022-10-18 21:20:37 INFO     172.17.0.1 - - [18/Oct/2022 21:20:37] "GET /about HTTP/1.1" 200 -
+2022-10-18 21:20:37 INFO     172.17.0.1 - - [18/Oct/2022 21:20:37] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-10-18 21:20:39 INFO     172.17.0.1 - - [18/Oct/2022 21:20:39] "GET / HTTP/1.1" 200 -
+2022-10-18 21:20:39 INFO     172.17.0.1 - - [18/Oct/2022 21:20:39] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-10-18 21:20:40 INFO     2022-10-18 21:19:55, Article "2020 CNCF Annual Report" retrieved!
+2022-10-18 21:20:40 INFO     172.17.0.1 - - [18/Oct/2022 21:20:40] "GET /1 HTTP/1.1" 200 -
+2022-10-18 21:20:40 INFO     172.17.0.1 - - [18/Oct/2022 21:20:40] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-10-18 21:20:42 INFO     172.17.0.1 - - [18/Oct/2022 21:20:42] "GET /create HTTP/1.1" 200 -
+2022-10-18 21:20:42 INFO     172.17.0.1 - - [18/Oct/2022 21:20:42] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-10-18 21:20:56 INFO     A new article "Testing Testing" created successfully
+2022-10-18 21:20:56 INFO     172.17.0.1 - - [18/Oct/2022 21:20:56] "POST /create HTTP/1.1" 302 -
+2022-10-18 21:20:56 INFO     172.17.0.1 - - [18/Oct/2022 21:20:56] "GET / HTTP/1.1" 200 -
+2022-10-18 21:20:56 INFO     172.17.0.1 - - [18/Oct/2022 21:20:56] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-10-18 21:20:59 INFO     2022-10-18 21:20:56, Article "Testing Testing" retrieved!
+2022-10-18 21:20:59 INFO     172.17.0.1 - - [18/Oct/2022 21:20:59] "GET /7 HTTP/1.1" 200 -
+2022-10-18 21:20:59 INFO     172.17.0.1 - - [18/Oct/2022 21:20:59] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-10-18 21:21:10 INFO     Metrics retreived successfully
+2022-10-18 21:21:10 INFO     172.17.0.1 - - [18/Oct/2022 21:21:10] "GET /metrics HTTP/1.1" 200 -
+2022-10-18 21:21:16 INFO     172.17.0.1 - - [18/Oct/2022 21:21:16] "GET /healtz HTTP/1.1" 404 -
+2022-10-18 21:21:34 INFO     Healthcheck request successful
+2022-10-18 21:21:34 INFO     172.17.0.1 - - [18/Oct/2022 21:21:34] "GET /healthz HTTP/1.1" 200 -
+2022-10-18 21:23:24 INFO     172.17.0.1 - - [18/Oct/2022 21:23:24] "GET / HTTP/1.1" 200 -
+2022-10-18 21:23:24 INFO     172.17.0.1 - - [18/Oct/2022 21:23:24] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-10-18 21:23:25 INFO     2022-10-18 21:19:55, Article "2020 CNCF Annual Report" retrieved!
+2022-10-18 21:23:25 INFO     172.17.0.1 - - [18/Oct/2022 21:23:25] "GET /1 HTTP/1.1" 200 -
+2022-10-18 21:23:25 INFO     172.17.0.1 - - [18/Oct/2022 21:23:25] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-10-18 21:23:29 ERROR    A non-existing article is accessed and a 404 page is returned. Please confirm postid: 16
+2022-10-18 21:23:29 INFO     172.17.0.1 - - [18/Oct/2022 21:23:29] "GET /16 HTTP/1.1" 404 -
+2022-10-18 21:23:29 INFO     172.17.0.1 - - [18/Oct/2022 21:23:29] "GET /static/css/main.css HTTP/1.1" 304 -
